@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<style>
+    h2{
+        font-size: 26px;
+        font-style: oblique;
+
+    }
+    form {
+
+    }
+    body{
+        background-size:100%;
+        background-repeat: no-repeat;
+        background-position: 100%;
+        background-image: url(https://thumbs.dreamstime.com/z/weather-icons-water-drops-rain-background-isolated-each-icon-separately-folder-35113266.jpg)
+    }
+    input[type=text], input[type=password] {
+        width:25%;
+        padding: 12px 16px;
+        margin: 8px 0;
+        display: block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+    button {
+        background-color: #2ECC71;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: 5px double#ccc;
+        cursor: pointer;
+        width: 30%;
+    }
+
+    .container {
+        padding: 16px;
+    }
+
+    span.psw {
+        float: right;
+        padding-top: 10px;
+    }
+
+    @media screen and (max-width: 30px) {
+        span.psw {
+            display: block;
+            float: none;
+        }
+
+    }
+</style>
+<body>
+
+<h2>
+    LOGIN PAGE
+</h2>
+
+<form action="action_page.php">
+
+    <div class="container">
+        <label><b>usename</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+        <label>                  </label>
+        <label><b>PASSWORD</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+
+        <button type="submit"><a href="HOME%20PAGE.html" class="button">Login</a></button>
+        <button type="submit"><a href="REGISTER%20PAGE.html" class="button">Register</a></button>
+    </div>
+
+    <script>
+        function LoginController($scope) {
+            $scope.logins = [];
+            $scope.login = function (uname, psw) {
+                localStorage.setItem("password", psw);
+                localStorage.setItem("username", uname);
+                $scope.logins.push(localStorage.getItem("uname") + " was logged in.");
+            };
+        }
+    </script>
+</form>
+
+</body>
+</html>
