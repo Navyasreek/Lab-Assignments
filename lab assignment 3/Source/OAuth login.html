@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<meta name="google-signin-client_id" content="599931006521-30ou53qsv939cpol4ps90qfdifo0bucq.apps.googleusercontent.com">
+<script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+<style>
+    h2{
+        font-size: 26px;
+        font-style: oblique;
+
+    }
+    form {
+
+    }
+    body{
+        background-size:100%;
+        background-repeat: no-repeat;
+        background-position: 100%;
+        background-image: url(https://thumbs.dreamstime.com/z/weather-icons-water-drops-rain-background-isolated-each-icon-separately-folder-35113266.jpg)
+    }
+    input[type=text], input[type=password] {
+        width:20%;
+        padding: 12px 16px;
+        margin: 8px 0;
+        display: block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+    span.buttonText {
+        display: inline-block;
+        vertical-align: middle;
+        padding-left: 42px;
+        padding-right: 42px;
+        font-size: 14px;
+        font-weight: bold;
+        /* Use the Roboto font that is loaded in the <head> */
+        font-family: 'Roboto', sans-serif;
+    }
+    button {
+        background-color: #2ECC71;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: 5px double#ccc;
+        cursor: pointer;
+        width: 10%;
+    }
+
+    .container {
+        padding: 16px;
+    }
+
+    span.psw {
+        float: right;
+        padding-top: 10px;
+    }
+
+    @media screen and (max-width: 30px) {
+        span.psw {
+            display: block;
+            float: none;
+        }
+
+    }
+</style>
+<body>
+
+<h2>
+    LOGIN PAGE
+</h2>
+
+    <div class="container">
+        <label><b>USERNAME</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+        <label>                  </label>
+        <label><b>PASSWORD</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+
+        <button type="submit"><a href="HOME%20PAGE.html" class="button">Login</a></button>
+        <button type="submit"><a href="REGISTER%20PAGE.html" class="button">Register</a></button>
+
+    </div>
+<!--  <div class="g-signin2" data-width="400" data-height="100" data-longtitle="true"> -->
+<div class="g-signin2" align="left" data-onsuccess="onSignIn"></div>
+
+<script>
+        function LoginController($scope) {
+            $scope.logins = [];
+            $scope.login = function (uname, psw) {
+                localStorage.setItem("password", psw);
+                localStorage.setItem("username", uname);
+                $scope.logins.push(localStorage.getItem("uname") + " was logged in.");
+            };
+        }
+    </script>
+
+</form>
+<script>
+    var googleUser;
+    googleUser = {};
+    var startApp = function() {
+        gapi.load('auth2', function(){
+            // Retrieve the singleton for the GoogleAuth library and set up the client.
+            auth2 = gapi.auth2.init({
+                client_id: '599931006521-30ou53qsv939cpol4ps90qfdifo0bucq.apps.googleusercontent.com',
+                cookiepolicy: 'single_host_origin',
+                fetch_basic_profile:'true'
+                // Request scopes in addition to 'profile' and 'email'
+                //scope: 'additional_scope'
+            });
+            attachSignin(document.getElementById('customBtn'));
+        });
+    };
+    function onSignIn(googleUser) {
+        var profile = googleUser.getBasicProfile();
+        console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+        console.log('Name: ' + profile.getName());
+        console.log('Image URL: ' + profile.getImageUrl());
+        console.log('Email: ' + profile.getEmail());
+        window.reload;
+        window.location="index.html";
+    }
+    function signOut() {
+        var auth2 = gapi.auth2.getAuthInstance();
+        auth2.signOut().then(function () {
+            console.log('User signed out.');
+        });
+    }
+    function renderButton() {
+        gapi.signin2.render('my-signin2', {
+            'scope': 'profile email',
+            'width': 240,
+            'height': 50,
+            'longtitle': true,
+            'theme': 'black',
+            'onsuccess': onSuccess,
+            'onfailure': onFailure
+        });
+    }
+    function attachSignin(element) {
+        console.log(element.id);
+        auth2.attachClickHandler(element, {},
+            function(googleUser) {
+                document.getElementById('name').innerText = "Signed in: " +
+                    googleUser.getBasicProfile().getName();
+            }, function(error) {
+                alert(JSON.stringify(error, undefined, 2));
+            });
+    }
+</script>
+
+</body>
+</html>
