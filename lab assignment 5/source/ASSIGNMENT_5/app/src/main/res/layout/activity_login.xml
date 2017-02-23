@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddiangBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/image2"
+    tools:context="labassignment_4.assignment_4.loginActivity">
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:layout_alignBaseline="@+id/email1"
+        android:layout_alignBottom="@+id/email1"
+        android:layout_alignParentEnd="true"
+        android:text=""
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:layout_alignTop="@+id/password1"
+        android:layout_alignStart="@+id/editText"
+        android:id="@+id/epassword"
+        android:text=""
+        tools:ignore="LabelFor" />
+
+    <Button
+        android:text="@string/locate_me"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/signup1"
+        android:onClick="onButtonClick"
+        android:layout_marginStart="13dp"
+        android:layout_alignBaseline="@+id/image"
+        android:layout_alignBottom="@+id/image"
+        android:layout_alignStart="@+id/epassword" />
+
+    <Button
+        android:text="@string/take_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/image"
+        android:onClick="onLoginClick"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/uname1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="14dp"
+        tools:ignore="LabelFor,RelativeOverlap" />
+
+    <TextView
+        android:text="@string/first_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fname"
+        android:layout_alignBaseline="@+id/uname1"
+        android:layout_alignBottom="@+id/uname1"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="@string/password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/password1"
+        android:layout_above="@+id/image"
+        android:layout_alignEnd="@+id/fname"
+        android:layout_marginBottom="35dp" />
+
+    <TextView
+        android:text="@string/email_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/email1"
+        android:layout_above="@+id/epassword"
+        android:layout_alignEnd="@+id/image"
+        android:layout_marginBottom="14dp" />
+
+    <TextView
+        android:text="@string/last_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/uname1"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="11dp"
+        android:id="@+id/lname" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_alignTop="@+id/lname"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/lname1"
+        tools:ignore="LabelFor" />
+
+</RelativeLayout>

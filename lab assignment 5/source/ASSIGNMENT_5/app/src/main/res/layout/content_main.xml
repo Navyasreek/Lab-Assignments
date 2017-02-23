@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/activity_login"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:paddingBottom="@dimen/activity_vertical_margin"
+android:paddingLeft="@dimen/activity_horizontal_margin"
+android:paddingRight="@dimen/activity_horizontal_margin"
+android:paddingTop="@dimen/activity_vertical_margin"
+android:background="@drawable/image2"
+tools:context="labassignment_4.assignment_4.loginActivity">
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/uname1"
+        tools:ignore="LabelFor,RelativeOverlap"
+        android:layout_alignTop="@+id/fname"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="35dp" />
+
+    <TextView
+        android:text="@string/first_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fname"
+        android:layout_marginTop="18dp"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:text="@string/last_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lname"
+        android:layout_below="@+id/uname1"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/lname1"
+        tools:ignore="LabelFor"
+        android:layout_below="@+id/lname"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="18dp" />
+
+    <TextView
+        android:text="@string/email_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/email1"
+        android:layout_below="@+id/lname1"
+        android:layout_alignStart="@+id/password1"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:text=""
+        tools:ignore="LabelFor"
+        android:layout_below="@+id/email1"
+        android:layout_alignStart="@+id/email1"
+        android:layout_marginTop="11dp" />
+
+    <TextView
+        android:text="@string/password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/password1"
+        android:layout_below="@+id/editText"
+        android:layout_alignEnd="@+id/fname"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/epassword"
+        android:text=""
+        tools:ignore="LabelFor"
+        android:layout_above="@+id/signup1"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="33dp" />
+
+    <Button
+        android:text="@string/locate_me"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/signup1"
+        android:onClick="onLocateClick"
+        android:layout_below="@+id/password1"
+        android:layout_alignStart="@+id/password1"
+        android:layout_marginTop="35dp" />
+
+    <Button
+        android:text="@string/take_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/image"
+        android:onClick="onimageClick"
+        android:background="@android:drawable/ic_menu_camera"
+        android:layout_alignTop="@+id/fname"
+        tools:ignore="RelativeOverlap"
+        android:layout_above="@+id/lname1"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

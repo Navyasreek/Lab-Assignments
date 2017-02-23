@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_photo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="labassignment_4.assignment_4.Photo"
+    tools:background="@drawable/image2">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_browse"
+        android:onClick="onClickOfPhotoBrowse"
+        android:textColor="@android:color/holo_green_light"
+        android:background="@android:drawable/ic_menu_crop"
+        android:layout_marginStart="21dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_take_photo"
+        android:textColor="@android:color/holo_green_light"
+        android:background="@android:drawable/ic_menu_camera"
+        android:layout_above="@+id/btn_browse"
+        android:layout_alignStart="@+id/btn_browse"
+        android:layout_marginBottom="54dp" />
+
+    <TextView
+        android:text="Camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Camera"
+        tools:fontFamily="monospace"
+        tools:textColor="?attr/actionModeSplitBackground"
+        android:layout_above="@+id/btn_take_photo"
+        android:layout_alignEnd="@+id/btn_take_photo"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+    <TextView
+        android:text="Gallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_browse"
+        android:layout_alignStart="@+id/Camera"
+        android:id="@+id/Gallery"
+        android:textColorHighlight="@android:color/holo_green_dark"
+        android:textColor="?attr/actionModeSplitBackground" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Go Home"
+        android:id="@+id/btn_photo_home"
+        android:onClick="redirectToHome"
+        android:textColor="?android:attr/colorButtonNormal"
+        android:background="@drawable/cast_expanded_controller_actionbar_bg_gradient_light"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>
