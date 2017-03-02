@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/gameboard"
+    android:layout_height="match_parent"
+    tools:context="cardboard.myapplication.MainActivity"
+    tools:deviceIds="wear_round">
+
+    <Button
+        android:text="ROLL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:id="@+id/roll"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/imageView2" />
+
+    <ImageView
+        android:src="@drawable/image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="33dp"
+        android:id="@+id/imageView2"
+        tools:ignore="ContentDescription"
+        android:layout_above="@+id/roll"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
