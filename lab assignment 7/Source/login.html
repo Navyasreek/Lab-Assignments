@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login</title>
+<style>
+
+form{
+align:center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+a:link, a:visited {
+    display: block;
+    width: 650px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #98bf21;
+    text-align: center;
+    padding: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+a:hover, a:active {
+    background-color: #7A991A;
+}
+    a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    width:auto;
+    text-decoration: none;
+    color: initial;
+}
+
+body{
+align-content:center;
+}
+</style>
+</head>
+<script type="text/javascript">
+
+          function addtext()
+          {
+             fname = document.getElementById('uname').value;
+            if (typeof(Storage) !== "undefined") {
+    // Store
+    localStorage.setItem("lastname", fname);
+
+                window.location.href="C:/Users/DELL/Desktop/Lab 3/Home.html";
+}
+              
+          }
+        </script>
+      
+<body>
+<ul>
+  <!--<li><a href="#home">Home</a></li>-->
+  <li><a href="">Feedback</a></li>
+  <li><a href="C:/Users/DELL/Desktop/Lab 3/About.html">About</a></li>
+</ul>
+<br/>
+<br/>
+
+<div align="center">
+Username: <input type=text id="uname"/><br/><br/><br/>
+Password: <input type=password name="pwd"/><br/><br/>
+<input type="Submit" value="Login" onclick="addtext()"/><br/>
+    <a href="#">forgot my password..</a>
+    <!-- <a href="C:/Desktop/ASE/New Folder/ASE/WebContent/Home.html"></a> -->
+    <!--<a href="C:/Users/DELL/Desktop/Register.html" class="button">Register</a>-->
+    <br/><input type=button value="Register" onClick="location.href='C:/Users/DELL/Desktop/Lab 3/Register.html'"/>
+    <div id="result"></div>
+    </div>
+</body>
+</html>
