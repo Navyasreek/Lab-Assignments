@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Place Autocomplete</title>
+    <title>Nutrition APP</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <script type="text/javascript" src="weather.js"></script>
@@ -31,8 +31,7 @@
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
         }
 
-        #origin-input,
-        #destination-input {
+       input {
             background-color: #fff;
             font-family: Roboto;
             font-size: 15px;
@@ -43,12 +42,12 @@
             width: 200px;
         }
 
-        #origin-input:focus,
-        #destination-input:focus {
+       input:focus {
             border-color: #4d90fe;
         }
         button {
             background-color: #2ECC71;
+            background-image: imageurl('data:image/png;base64,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')
             color: white;
             padding: 14px 20px;
             margin: 8px 0;
@@ -74,144 +73,18 @@
 </head>
 <body>
 <input id="origin-input" class="controls" type="text"
-       placeholder="Enter an origin location">
-<input id="destination-input" class="controls" type="text"
-       placeholder="Enter a destination location">
+       placeholder="Enter an Food Item" > 
+    <button ></button>
 
 
 <div id="mode-selector" class="controls">
-    <input type="radio" name="type" id="changemode-walking" checked="checked">
-    <label for="changemode-walking">Walking</label>
-
-    <input type="radio" name="type" id="changemode-transit">
-    <label for="changemode-transit">Transit</label>
-
-    <input type="radio" name="type" id="changemode-driving">
-    <label for="changemode-driving">Driving</label>
-
+    
+   
 
 </div>
 
-<div style="background-image: url(https://thumbs.dreamstime.com/z/weather-icons-water-drops-rain-background-isolated-each-icon-separately-folder-35113266.jpg)">
-    <button height="2px" id="source-temp" name=" temp" onclick="sourceWeatherDetails()" >Get Source Weather</button>
-    <input style="width: 700px" type = "hidden" id="sourceWeatherDetails" type="text" >
-</div>
-<div style="background-image: url(https://thumbs.dreamstime.com/z/weather-icons-water-drops-rain-background-isolated-each-icon-separately-folder-35113266.jpg)">
-    <button id="dest-temp" name=" temp" onclick="destWeatherDetails()" >Get Destination Weather</button>
-    <input style="width: 700px" type = "hidden" id="destWeatherDetails" type="text"  >
-</div>
+<div style="background-image: url(data:image/png;base64,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)">
+    
 
-
-<div id="map"></div>
-
-<input id="weatherA"type="text"placeholder="Chicago 12'C">
-<script>
-    // This example requires the Places library. Include the libraries=places
-    // parameter when you first load the API. For example:
-    // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
-
-    function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-            mapTypeControl: false,
-            center: {lat: -33.8688, lng: 151.2195},
-            zoom: 13
-        });
-
-        new AutocompleteDirectionsHandler(map);
-    }
-
-    /**
-     * @constructor
-     */
-    function AutocompleteDirectionsHandler(map) {
-        this.map = map;
-        this.originPlaceId = null;
-        this.destinationPlaceId = null;
-        this.travelMode = 'WALKING';
-        var originInput = document.getElementById('origin-input');
-        var destinationInput = document.getElementById('destination-input');
-        var modeSelector = document.getElementById('mode-selector');
-        this.directionsService = new google.maps.DirectionsService;
-        this.directionsDisplay = new google.maps.DirectionsRenderer;
-        this.directionsDisplay.setMap(map);
-
-        var originAutocomplete = new google.maps.places.Autocomplete(
-            originInput, {placeIdOnly: true});
-        var destinationAutocomplete = new google.maps.places.Autocomplete(
-            destinationInput, {placeIdOnly: true});
-
-        this.setupClickListener('changemode-walking', 'WALKING');
-        this.setupClickListener('changemode-transit', 'TRANSIT');
-        this.setupClickListener('changemode-driving', 'DRIVING');
-
-        this.setupPlaceChangedListener(originAutocomplete, 'ORIG');
-        this.setupPlaceChangedListener(destinationAutocomplete, 'DEST');
-
-        this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(originInput);
-        this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(destinationInput);
-        this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(modeSelector);
-    }
-
-    // Sets a listener on a radio button to change the filter type on Places
-    // Autocomplete.
-    AutocompleteDirectionsHandler.prototype.setupClickListener = function(id, mode) {
-        var radioButton = document.getElementById(id);
-        var me = this;
-        radioButton.addEventListener('click', function() {
-            me.travelMode = mode;
-            me.route();
-        });
-    };
-
-    AutocompleteDirectionsHandler.prototype.setupPlaceChangedListener = function(autocomplete, mode) {
-        var me = this;
-        autocomplete.bindTo('bounds', this.map);
-        autocomplete.addListener('place_changed', function() {
-            var place = autocomplete.getPlace();
-            if (!place.place_id) {
-                window.alert("Please select an option from the dropdown list.");
-                return;
-            }
-            if (mode == 'ORIG') {
-                me.originPlaceId = place.place_id;
-            } else {
-                me.destinationPlaceId = place.place_id;
-            }
-            me.route();
-        });
-
-    };
-
-    AutocompleteDirectionsHandler.prototype.route = function() {
-        if (!this.originPlaceId || !this.destinationPlaceId) {
-            return;
-        }
-        var me = this;
-
-        this.directionsService.route({
-            origin: {'placeId': this.originPlaceId},
-            destination: {'placeId': this.destinationPlaceId},
-            travelMode: this.travelMode
-        }, function(response, status) {
-            if (status === 'OK') {
-                me.directionsDisplay.setDirections(response);
-            } else {
-                window.alert('Directions request failed due to ' + status);
-            }
-        });
-    };
-
-    var contentString ='http://25.media.tumblr.com/tumblr_loz7n3PdaZ1qdci9xo1_r3_500.jpg';
-    var infowindow = new google.maps.InfoWindow({
-        content: contentString
-    });
-    originPlaceId.addListener('click', function() {
-        infowindow.open(map, originPlaceId);
-    });
-
-
-</script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTgbc1PJQUrsUfl_wguuorrgBinb0rQ40&libraries=places&callback=initMap"
-        async defer></script>
 </body>
 </html>
