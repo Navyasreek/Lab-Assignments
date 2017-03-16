@@ -1,21 +1,16 @@
-<ion-view title="Login" id="page">
-
-    <ion-content padding="true" class="has-header">
-    
-        <form class="list">
-            <ion-list>
-                <label class="item item-input">
-                    <span class="input-label">Username</span>
-                    <input type="text" placeholder="">
-                </label>
-                <label class="item item-input">
-                    <span class="input-label">Password</span>
-                    <input type="password" placeholder="">
-                </label>
-            </ion-list>
-            <div class="spacer" style="height: 40px;"></div>
-            <a ng-click="login()" id="login-button1" class="button button-stable  button-block">Log in</a>
-            <a ui-sref="register" id="login-button2" class="button button-positive  button-block button-clear">Register</a>
-        </form>
+<ion-view view-title="Login"  name="login-view">
+    <ion-content class="padding">
+        <div class="ab">
+        <div class="list list-inset">
+            <label class="item item-input">
+                <input type="text" placeholder="Username" ng-model="data.username">
+            </label>
+            <label class="item item-input">
+                <input type="password" placeholder="Password" ng-model="data.password">
+            </label>
+        </div>
+        <button class="button button-block button-dark" ng-click="login()">Login</button>
+          <button class="button button-block button-positive" ngclick="fblogin()">Connect Using Facebook</button>
+</div>
     </ion-content>
 </ion-view>
