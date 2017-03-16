@@ -1,0 +1,24 @@
+<ion-view view-title="TexttoSpeech" class="mybg" >
+  <ion-content>
+      <div>
+                <label class="item item-input" height="200" width="200">
+                <span class="input-label">Copy and paste your text here...</span>
+                <input type="text" ng-model="homedata" >
+                </label>
+               
+              <div ng-controller="mycontroller1" align="center">
+                  <button type="submit" ng-click="converttoSpeech()" class="button button-block button-positive" >CONVERT TO SPEECH</button>
+                 <div id="audio" src="{{homedata}}" ></div>
+                 
+              </div>
+             <div ng-controller="mycontroller2" align="center   ">
+                <button type="submit" ng-click="sentimentCheck()" class="button button-block button-positive">CHECK SENTIMENT</button>
+                 <center>
+                <textarea  align="center" ng-model="output1" >{{output1}}</textarea>
+                <textarea  align="center" ng-model="output2" >{{output2}}</textarea>
+                </center>
+             </div>
+        </div>
+      
+  </ion-content>
+</ion-view>
